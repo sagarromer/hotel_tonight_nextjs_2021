@@ -37,3 +37,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 installed next-connect package
 handled requests with that
 seperated controller logic into controllers folder
+##Changes
+mongodb connection logic seperated into dbconnect.js file
+imported and called mongodb
+database environmnet variables added
