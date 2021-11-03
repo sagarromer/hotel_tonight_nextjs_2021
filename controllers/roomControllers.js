@@ -1,4 +1,6 @@
 import Room from '../models/room';
+import ErrorHandler from '../utils/errorHandler';
+
 // Create all rooms   =>   /api/rooms
 const allRooms = async (req, res) => {
     try {
@@ -17,14 +19,11 @@ const allRooms = async (req, res) => {
     
 }
 // get room details   =>   /api/rooms/:id
-const getSingleRoom = async (req, res) => {
+const getSingleRoom = async (req, res, next) => {
     try{
         const room = await Room.findById(req.query.id);
         if(!room){
-            return res.status(404).json({
-                success: false,
-                room: 'room not found with this ID'
-            })
+            return next(new ErrorHandler('room not found with this ID'));
         }
         res.status(200).json({
             success: true,
@@ -57,16 +56,13 @@ const newRoom = async (req, res) => {
     
 }
 // update room details   =>   /api/rooms/:id
-const updateRoom = async (req, res) => {
+const updateRoom = async (req, res, next) => {
     try{
         let room = await Room.findById(req.query.id);
         console.log(room);
         
         if(!room){
-            return res.status(404).json({
-                success: false,
-                room: 'room not found with this ID'
-            })
+            return next(new ErrorHandler('room not found with this ID'));  
         }
         room = await Room.findByIdAndUpdate(req.query.id, req.body, {
             new: true,
@@ -85,15 +81,12 @@ const updateRoom = async (req, res) => {
     }
     
 }
-const deleteRoom = async (req, res) => {
+const deleteRoom = async (req, res, next) => {
     try{
         let room = await Room.findById(req.query.id);
         
         if(!room){
-            return res.status(404).json({
-                success: false,
-                room: 'room not found with this ID'
-            })
+            return next(new ErrorHandler('room not found with this ID'));
         }
         await room.remove();
         res.status(200).json({

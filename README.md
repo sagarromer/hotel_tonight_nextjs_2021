@@ -56,3 +56,6 @@ seperate api end point to get room details added
 update single room details endpoint created
 ##changes
 delete room endpoint created
+##changes
+created error handler class  to manage app errors
+replaced operational errors with error handler class
