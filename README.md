@@ -41,3 +41,5 @@ seperated controller logic into controllers folder
 mongodb connection logic seperated into dbconnect.js file
 imported and called mongodb
 database environmnet variables added
+##changes
+created room model
