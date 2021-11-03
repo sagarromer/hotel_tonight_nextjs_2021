@@ -47,3 +47,6 @@ created room model
 created and saved room data
 ##changes
 fetch all rooms completed
+##changes
+seeder rooms data and files created 
+changed package json file to add the seed data commnand
