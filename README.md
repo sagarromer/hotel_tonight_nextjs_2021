@@ -54,3 +54,5 @@ changed package json file to add the seed data commnand
 seperate api end point to get room details added
 ##changes
 update single room details endpoint created
+##changes
+delete room endpoint created

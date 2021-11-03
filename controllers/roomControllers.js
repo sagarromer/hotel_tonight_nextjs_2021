@@ -85,9 +85,33 @@ const updateRoom = async (req, res) => {
     }
     
 }
+const deleteRoom = async (req, res) => {
+    try{
+        let room = await Room.findById(req.query.id);
+        
+        if(!room){
+            return res.status(404).json({
+                success: false,
+                room: 'room not found with this ID'
+            })
+        }
+        await room.remove();
+        res.status(200).json({
+            success: true,
+            message: 'room is deleted.'
+        })
+    } catch {
+        res.status(400).json({
+            success: false,
+            error: error
+        })
+    }
+    
+}
 export {
     allRooms,
     newRoom,
     getSingleRoom,
-    updateRoom
+    updateRoom,
+    deleteRoom
 }
