@@ -45,3 +45,5 @@ database environmnet variables added
 created room model
 ##changes
 created and saved room data
+##changes
+fetch all rooms completed
