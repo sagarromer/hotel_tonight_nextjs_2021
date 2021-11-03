@@ -52,3 +52,5 @@ seeder rooms data and files created
 changed package json file to add the seed data commnand
 ##changes
 seperate api end point to get room details added
+##changes
+update single room details endpoint created
