@@ -63,3 +63,5 @@ replaced operational errors with error handler class
 error handler middleware created and called in appropiate routers
 ##changes
 asynchronous errors handled
+##changes
+formatted several error masseges
