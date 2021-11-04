@@ -61,3 +61,5 @@ created error handler class  to manage app errors
 replaced operational errors with error handler class
 ##changes
 error handler middleware created and called in appropiate routers
+##changes
+asynchronous errors handled
