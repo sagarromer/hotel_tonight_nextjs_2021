@@ -67,3 +67,5 @@ asynchronous errors handled
 formatted several error masseges
 ##changes
 rooms search by location implemented witha api features class
+##changes
+apifeatures filter method implemented
