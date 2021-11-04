@@ -65,3 +65,5 @@ error handler middleware created and called in appropiate routers
 asynchronous errors handled
 ##changes
 formatted several error masseges
+##changes
+rooms search by location implemented witha api features class
