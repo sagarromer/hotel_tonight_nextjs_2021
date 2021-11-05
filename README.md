@@ -71,3 +71,6 @@ rooms search by location implemented witha api features class
 apifeatures filter method implemented
 ##changes
 pagination implemented
+##changes
+layout components header/footer created
+converted static bootstrap components to react components
