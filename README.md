@@ -85,4 +85,6 @@ configured redux store
 created necessary files for redux in redux folder
 ##changes
 all rooms reducer and constants created
+##changes
+rooms actions for get rooms function created
 
