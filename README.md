@@ -87,4 +87,6 @@ created necessary files for redux in redux folder
 all rooms reducer and constants created
 ##changes
 rooms actions for get rooms function created
+##changes
+dispatchrooms action in getSe completed
 
