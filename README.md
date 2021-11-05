@@ -74,3 +74,5 @@ pagination implemented
 ##changes
 layout components header/footer created
 converted static bootstrap components to react components
+##changes
+layout component created with header footer component
