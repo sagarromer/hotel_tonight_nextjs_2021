@@ -83,4 +83,6 @@ created home page with layout and component
 installed necessary packages redux
 configured redux store
 created necessary files for redux in redux folder
+##changes
+all rooms reducer and constants created
 
