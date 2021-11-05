@@ -76,3 +76,7 @@ layout components header/footer created
 converted static bootstrap components to react components
 ##changes
 layout component created with header footer component
+##changes
+custom css added to global css file
+created home page with layout and component
+
