@@ -79,4 +79,8 @@ layout component created with header footer component
 ##changes
 custom css added to global css file
 created home page with layout and component
+##changes
+installed necessary packages redux
+configured redux store
+created necessary files for redux in redux folder
 
