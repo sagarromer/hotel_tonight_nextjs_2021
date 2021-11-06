@@ -112,6 +112,9 @@ user model created
 user registration endpoint created
 user register controller created
 user password encrupting implemented in the model
+##changes
+added password compare to user model
+next auth authentication implemented
 
 
 
