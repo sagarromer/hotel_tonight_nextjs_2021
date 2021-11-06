@@ -104,5 +104,10 @@ added pagination support for home page
 ##changes
 search component created
 search page created
+##changes
+advanced search options implemented
+##changes
+user model created
+
 
 
