@@ -115,6 +115,10 @@ user password encrupting implemented in the model
 ##changes
 added password compare to user model
 next auth authentication implemented
+##changes
+button loader component created
+login component created
+login page created
 
 
 
