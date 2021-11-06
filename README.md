@@ -89,4 +89,6 @@ all rooms reducer and constants created
 rooms actions for get rooms function created
 ##changes
 dispatchrooms action in getSe completed
+##changes
+home component modified to create rooms based on data
 
