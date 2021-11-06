@@ -97,4 +97,7 @@ added react toastify package
 room details reducer and actions created
 ##changes
 room details component created and page created
+##changes
+room features extracted to seperate component
+
 

@@ -3,6 +3,8 @@ import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Image from 'next/image'
 
+import RoomFeatures from './RoomFeatures'
+
 // import DatePicker from 'react-datepicker'
 // import "react-datepicker/dist/react-datepicker.css";
 
@@ -71,6 +73,7 @@ const RoomDetails = () => {
                     <div className="col-12 col-md-6 col-lg-8">
                         <h3>Description</h3>
                         <p>{room.description}</p>
+                        <RoomFeatures room={room} />
                     </div>
 
                     <div className="col-12 col-md-6 col-lg-4">
