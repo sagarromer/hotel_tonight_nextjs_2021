@@ -7,10 +7,16 @@ import RoomItem from './room/RoomItem'
 
 
 import { useSelector } from 'react-redux'
+import { toast } from 'react-toastify'
 
 const Home = () => {
     const { rooms } = useSelector(state => state.allRooms);
     console.log(rooms);
+
+    useEffect(() => {
+        toast.success('this is a success message');
+        
+    }, [])
     
 
     return (
