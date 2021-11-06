@@ -99,5 +99,7 @@ room details reducer and actions created
 room details component created and page created
 ##changes
 room features extracted to seperate component
+##changes
+added pagination support for home page
 
 
