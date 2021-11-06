@@ -38,7 +38,7 @@ const Search = () => {
                             />
                         </div>
 
-                        {/* <div className="form-group">
+                        <div className="form-group">
                             <label htmlFor="guest_field">No. of Guests</label>
                             <select
                                 className="form-control"
@@ -64,7 +64,7 @@ const Search = () => {
                                     <option key={category} value={category}>{category}</option>
                                 ))}
                             </select>
-                        </div> */}
+                        </div>
 
                         <button type="submit" className="btn btn-block py-2">Search</button>
                     </form>
