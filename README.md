@@ -101,5 +101,8 @@ room details component created and page created
 room features extracted to seperate component
 ##changes
 added pagination support for home page
+##changes
+search component created
+search page created
 
 

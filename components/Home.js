@@ -53,7 +53,7 @@ const Home = () => {
         <>
         <section id="rooms" className="container mt-5">
 
-        <h2 className='mb-3 ml-2 stays-heading'>stay in new york</h2>
+        <h2 className='mb-3 ml-2 stays-heading'>{location ? `Rooms in ${location}` : 'All Rooms'}</h2>
 
         <Link href='/search' >
             <a className='ml-2 back-to-search'>
