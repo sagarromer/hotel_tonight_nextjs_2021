@@ -108,6 +108,10 @@ search page created
 advanced search options implemented
 ##changes
 user model created
+##changes
+user registration endpoint created
+user register controller created
+user password encrupting implemented in the model
 
 
 
