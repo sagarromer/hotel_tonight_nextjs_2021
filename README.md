@@ -93,4 +93,8 @@ dispatchrooms action in getSe completed
 home component modified to create rooms based on data
 ##changes
 added react toastify package
+##changes
+room details reducer and actions created
+##changes
+room details component created and page created
 

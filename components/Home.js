@@ -4,8 +4,6 @@ import Link from 'next/link'
 
 import RoomItem from './room/RoomItem'
 
-
-
 import { useSelector } from 'react-redux'
 import { toast } from 'react-toastify'
 
