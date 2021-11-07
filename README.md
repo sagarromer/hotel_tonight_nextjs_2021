@@ -129,6 +129,9 @@ cloudinary configured to save avatar
 ##changes
 added me endpoint for backend api
 authentication middleware added before me handler
+##changes
+load user constants, reducers, actions created
+changes made to header component
 
 
 

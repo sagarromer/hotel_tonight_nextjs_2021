@@ -1,14 +1,26 @@
 import React from 'react'
 import Link from 'next/link'
 
+import { useDispatch, useSelector } from 'react-redux'
+import { loadUser } from '../../redux/actions/userActions'
+import { signOut } from 'next-auth/client'
 
 const Header = () => {
+    const dispatch = useDispatch();
+
+    const { user, loading } = useSelector(state => state.loadedUser);
+    useEffect(() => {
+        if (!user) {
+            dispatch(loadUser())
+        }
+    }, [dispatch, user])
+
     return (
         <nav className="navbar row justify-content-center sticky-top">
             <div className="container">
                 <div className="col-3 p-0">
                     <div className="navbar-brand">
-                        <Link href='/'>
+                        <Link href='/' passHref>
                             <img style={{ cursor: 'pointer', height: '50px', width:'80px' }} src="/images/hotel_tonight_logo.png" alt="BookIT" />
                         </Link>
                     </div>
