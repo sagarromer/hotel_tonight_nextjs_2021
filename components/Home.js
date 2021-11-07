@@ -7,10 +7,13 @@ import Pagination from 'react-js-pagination'
 
 import RoomItem from './room/RoomItem'
 
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { toast } from 'react-toastify'
+import { clearErrors } from '../redux/actions/roomActions'
+
 
 const Home = () => {
+    const dispatch = useDispatch()
     const router = useRouter()
 
     const { rooms, resPerPage, roomsCount, filteredRoomsCount, error } = useSelector(state => state.allRooms);
@@ -20,7 +23,8 @@ const Home = () => {
 
 
     useEffect(() => {
-        toast.success('this is a success message');
+        toast.error(error)
+        dispatch(clearErrors())
         
     }, [])
 

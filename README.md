@@ -132,6 +132,9 @@ authentication middleware added before me handler
 ##changes
 load user constants, reducers, actions created
 changes made to header component
+##changes
+show user in the header implemented redux  actions reducers constants updated for this 
+logout user handled
 
 
 
