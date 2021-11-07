@@ -139,6 +139,8 @@ logout user handled
 used getserverside props and session to restrict access to the pages 
 ##changes
 update user profile endpoint and controller logic implemented
+##changes
+update user profile reducer constants and actions implemented
 
 
 
