@@ -137,6 +137,8 @@ show user in the header implemented redux  actions reducers constants updated fo
 logout user handled
 ##changes
 used getserverside props and session to restrict access to the pages 
+##changes
+update user profile endpoint and controller logic implemented
 
 
 
