@@ -126,6 +126,9 @@ configured to save avatars on a specific folder
 register user component created
 redux updated for register user actions
 cloudinary configured to save avatar
+##changes
+added me endpoint for backend api
+authentication middleware added before me handler
 
 
 
