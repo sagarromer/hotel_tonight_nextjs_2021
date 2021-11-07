@@ -122,6 +122,10 @@ login page created
 ##changes
 added cloudinary image support npm package
 configured to save avatars on a specific folder
+##changes
+register user component created
+redux updated for register user actions
+cloudinary configured to save avatar
 
 
 
