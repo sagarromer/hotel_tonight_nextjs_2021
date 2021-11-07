@@ -135,6 +135,8 @@ changes made to header component
 ##changes
 show user in the header implemented redux  actions reducers constants updated for this 
 logout user handled
+##changes
+used getserverside props and session to restrict access to the pages 
 
 
 
