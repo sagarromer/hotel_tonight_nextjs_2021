@@ -20,7 +20,7 @@ cloudinary.config({
 const registerUser = catchAsyncErrors(async (req, res) => {
 
     const result = await cloudinary.v2.uploader.upload(req.body.avatar, {
-        folder: 'bookit/avatars',
+        folder: 'hotel_tonight/avatars',
         width: '150',
         crop: 'scale'
     })

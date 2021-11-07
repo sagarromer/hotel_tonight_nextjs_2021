@@ -119,6 +119,9 @@ next auth authentication implemented
 button loader component created
 login component created
 login page created
+##changes
+added cloudinary image support npm package
+configured to save avatars on a specific folder
 
 
 
