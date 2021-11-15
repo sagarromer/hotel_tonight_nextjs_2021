@@ -149,5 +149,7 @@ next config updated
 ##changes
 forgot password redux reducers constants actions implemented
 forgot password page implemented
+##changes
+password reset and new password handle endpoint implmented
 
 
