@@ -141,6 +141,10 @@ used getserverside props and session to restrict access to the pages
 update user profile endpoint and controller logic implemented
 ##changes
 update user profile reducer constants and actions implemented
-
+##changes
+implemented reset password token
+installed nodemailor
+forgot password controller implemented
+next config updated
 
 
