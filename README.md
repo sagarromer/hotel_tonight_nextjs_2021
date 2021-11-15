@@ -151,5 +151,9 @@ forgot password redux reducers constants actions implemented
 forgot password page implemented
 ##changes
 password reset and new password handle endpoint implmented
+##changes
+reset password redux constants reducers actions implemented
+reset password endpoint implemented
+password reset component implemented  when success go to login page
 
 
