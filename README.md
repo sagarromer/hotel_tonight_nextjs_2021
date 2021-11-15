@@ -146,5 +146,8 @@ implemented reset password token
 installed nodemailor
 forgot password controller implemented
 next config updated
+##changes
+forgot password redux reducers constants actions implemented
+forgot password page implemented
 
 
