@@ -44,6 +44,39 @@ const RoomDetails = () => {
         }
 
     }
+    const newBookingHandler = async () => {
+
+        const bookingData = {
+            room: router.query.id,
+            checkInDate,
+            checkOutDate,
+            daysOfStay,
+            amountPaid: 90,
+            paymentInfo: {
+                id: 'STRIPE_PAYMENT_ID',
+                status: 'STRIPE_PAYMENT_STATUS'
+            }
+        }
+
+        try {
+
+            const config = {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }
+
+            const { data } = await axios.post('/api/bookings', bookingData, config)
+
+            console.log(data);
+
+        } catch (error) {
+
+            console.log(error.response);
+
+        }
+
+    }
     useEffect(() => {
 
         toast.error(error)
@@ -59,7 +92,7 @@ const RoomDetails = () => {
     return (
         <>
             <Head>
-                <title>{room.name} - BookIT</title>
+                <title>{room.name} - hotel_tonight</title>
             </Head>
 
             <div className="container container-fluid">
@@ -116,6 +149,8 @@ const RoomDetails = () => {
                                 selectsRange
                                 inline
                             />
+                            <button className="btn btn-block py-3 booking-btn"
+                            onClick={newBookingHandler}>pay</button>
                         </div>
                     </div>
                 </div>

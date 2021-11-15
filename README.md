@@ -160,5 +160,7 @@ booking modal created
 ##changes
 installed react datepicker
 display date picker and handled input
+##changes
+create and save new booking implmented
 
 
