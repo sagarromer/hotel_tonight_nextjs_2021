@@ -155,5 +155,7 @@ password reset and new password handle endpoint implmented
 reset password redux constants reducers actions implemented
 reset password endpoint implemented
 password reset component implemented  when success go to login page
+##changes
+booking modal created
 
 
