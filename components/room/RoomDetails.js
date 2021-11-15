@@ -5,8 +5,8 @@ import Image from 'next/image'
 
 import RoomFeatures from './RoomFeatures'
 
-// import DatePicker from 'react-datepicker'
-// import "react-datepicker/dist/react-datepicker.css";
+import DatePicker from 'react-datepicker'
+import "react-datepicker/dist/react-datepicker.css";
 
 import { Carousel } from 'react-bootstrap'
 
@@ -17,13 +17,33 @@ import { clearErrors } from '../../redux/actions/roomActions'
 import axios from 'axios'
 
 const RoomDetails = () => {
-
+    const [checkInDate, setCheckInDate] = useState()
+    const [checkOutDate, setCheckOutDate] = useState()
     const dispatch = useDispatch()
     const router = useRouter();
 
     const { room, error } = useSelector(state => state.roomDetails);
 
+    const onChange = (dates) => {
+        const [checkInDate, checkOutDate] = dates;
 
+        setCheckInDate(checkInDate)
+        setCheckOutDate(checkOutDate)
+
+        if (checkInDate && checkOutDate) {
+
+            // Calclate days of stay
+
+            const days = Math.floor(((new Date(checkOutDate) - new Date(checkInDate)) / 86400000) + 1)
+
+            setDaysOfStay(days)
+
+
+            dispatch(checkBooking(id, checkInDate.toISOString(), checkOutDate.toISOString()))
+
+        }
+
+    }
     useEffect(() => {
 
         toast.error(error)
@@ -85,6 +105,17 @@ const RoomDetails = () => {
                             <p className="mt-5 mb-3">
                                 Pick Check In & Check Out Date
                             </p>
+                            <DatePicker
+                                className='w-100'
+                                selected={checkInDate}
+                                onChange={onChange}
+                                startDate={checkInDate}
+                                endDate={checkOutDate}
+                                minDate={new Date()}
+                                excludeDates={excludedDates}
+                                selectsRange
+                                inline
+                            />
                         </div>
                     </div>
                 </div>
