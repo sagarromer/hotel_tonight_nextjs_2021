@@ -73,8 +73,35 @@ const checkRoomBookingAvailability = catchAsyncErrors(async (req, res) => {
         isAvailable
     })
 })
+// Check booked dates of a room   =>   /api/bookings/check_booked_dates
+const checkBookedDatesOfRoom = catchAsyncErrors(async (req, res) => {
 
+    const { roomId } = req.query;
+
+    const bookings = await Booking.find({ room: roomId });
+
+    let bookedDates = [];
+
+    const timeDiffernece = moment().utcOffset() / 60;
+
+    bookings.forEach(booking => {
+
+        const checkInDate = moment(booking.checkInDate).add(timeDiffernece, 'hours')
+        const checkOutDate = moment(booking.checkOutDate).add(timeDiffernece, 'hours')
+
+        const range = moment.range(moment(checkInDate), moment(checkOutDate));
+
+        const dates = Array.from(range.by('day'));
+        bookedDates = bookedDates.concat(dates);
+    })
+
+    res.status(200).json({
+        success: true,
+        bookedDates
+    })
+})
 export {
     newBooking,
     checkRoomBookingAvailability,
+    checkBookedDatesOfRoom
 }

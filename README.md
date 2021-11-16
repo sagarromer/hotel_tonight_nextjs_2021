@@ -167,5 +167,8 @@ check room book availability end poit and controller implemented
 ##changes
 handle room availability redux constants reducers actions implemented
 room details component updated
+##changes
+moment and extend moment packages installed
+get all booked dates of a room implemented
 
 
