@@ -175,5 +175,8 @@ added mongoose-timezone pakacge to resolve time difference problem
 ##changes
 disable booked dates on calender redux implemented
 roomdetails component improved to disable booked dates.
+##changes
+mybookings redux implemented
+mybooking page and component created
 
 
