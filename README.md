@@ -162,5 +162,7 @@ installed react datepicker
 display date picker and handled input
 ##changes
 create and save new booking implmented
+##changes
+check room book availability end poit and controller implemented
 
 

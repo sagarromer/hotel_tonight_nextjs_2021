@@ -74,3 +74,7 @@ const checkRoomBookingAvailability = catchAsyncErrors(async (req, res) => {
     })
 })
 
+export {
+    newBooking,
+    checkRoomBookingAvailability,
+}
