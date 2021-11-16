@@ -181,5 +181,7 @@ mybooking page and component created
 ##changes
 bookingdetails redux implemented
 bookingdetails page and component created
+##changes
+booking details component implemented
 
 
