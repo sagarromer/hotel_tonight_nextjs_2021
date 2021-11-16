@@ -178,5 +178,8 @@ roomdetails component improved to disable booked dates.
 ##changes
 mybookings redux implemented
 mybooking page and component created
+##changes
+bookingdetails redux implemented
+bookingdetails page and component created
 
 
