@@ -183,5 +183,7 @@ bookingdetails redux implemented
 bookingdetails page and component created
 ##changes
 booking details component implemented
+##changes
+implemented invoice get pdf functinonality with easy invoice package
 
 
