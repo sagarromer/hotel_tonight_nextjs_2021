@@ -170,5 +170,7 @@ room details component updated
 ##changes
 moment and extend moment packages installed
 get all booked dates of a room implemented
+##changes
+added mongoose-timezone pakacge to resolve time difference problem
 
 
