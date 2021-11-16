@@ -14,6 +14,10 @@ import { useDispatch, useSelector } from 'react-redux'
 import { toast } from 'react-toastify';
 import { clearErrors } from '../../redux/actions/roomActions'
 
+
+import { checkBooking, getBookedDates } from '../../redux/actions/bookingActions'
+import { CHECK_BOOKING_RESET } from '../../redux/constants/bookingConstants'
+
 import axios from 'axios'
 
 const RoomDetails = () => {
@@ -29,6 +33,11 @@ const RoomDetails = () => {
     const { user } = useSelector(state => state.loadedUser);
     const { room, error } = useSelector(state => state.roomDetails);
     const { available, loading: bookingLoading } = useSelector(state => state.checkBooking);
+
+    const excludedDates = []
+    dates.forEach(date => {
+        excludedDates.push(new Date(date))
+    })
 
     const onChange = (dates) => {
         const [checkInDate, checkOutDate] = dates;
@@ -50,6 +59,7 @@ const RoomDetails = () => {
         }
 
     }
+    const { id } = router.query;
     const newBookingHandler = async () => {
 
         const bookingData = {
@@ -84,7 +94,7 @@ const RoomDetails = () => {
 
     }
     useEffect(() => {
-
+        dispatch(getBookedDates(id))
         toast.error(error)
         dispatch(clearErrors())
 
@@ -92,7 +102,7 @@ const RoomDetails = () => {
             dispatch({ type: CHECK_BOOKING_RESET })
         }
 
-    }, [])
+    }, [dispatch, id])
 
 
     return (

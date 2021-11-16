@@ -172,5 +172,8 @@ moment and extend moment packages installed
 get all booked dates of a room implemented
 ##changes
 added mongoose-timezone pakacge to resolve time difference problem
+##changes
+disable booked dates on calender redux implemented
+roomdetails component improved to disable booked dates.
 
 
