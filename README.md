@@ -164,5 +164,8 @@ display date picker and handled input
 create and save new booking implmented
 ##changes
 check room book availability end poit and controller implemented
+##changes
+handle room availability redux constants reducers actions implemented
+room details component updated
 
 

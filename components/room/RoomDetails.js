@@ -19,10 +19,16 @@ import axios from 'axios'
 const RoomDetails = () => {
     const [checkInDate, setCheckInDate] = useState()
     const [checkOutDate, setCheckOutDate] = useState()
+    const [daysOfStay, setDaysOfStay] = useState()
+    const [paymentLoading, setPaymentLoading] = useState(false)
+    
     const dispatch = useDispatch()
     const router = useRouter();
 
+    const { dates } = useSelector(state => state.bookedDates);
+    const { user } = useSelector(state => state.loadedUser);
     const { room, error } = useSelector(state => state.roomDetails);
+    const { available, loading: bookingLoading } = useSelector(state => state.checkBooking);
 
     const onChange = (dates) => {
         const [checkInDate, checkOutDate] = dates;
@@ -149,6 +155,18 @@ const RoomDetails = () => {
                                 selectsRange
                                 inline
                             />
+                            {available === true &&
+                                <div className="alert alert-success my-3 font-weight-bold">Room is available. Book now.</div>
+                            }
+
+                            {available === false &&
+                                <div className="alert alert-danger my-3 font-weight-bold">Room not available. Try different dates.</div>
+                            }
+
+                            {available && !user &&
+                                <div className="alert alert-danger my-3 font-weight-bold">Login to book room.</div>
+                            }
+
                             <button className="btn btn-block py-3 booking-btn"
                             onClick={newBookingHandler}>pay</button>
                         </div>
