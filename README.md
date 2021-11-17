@@ -201,6 +201,8 @@ new review redux part implemented
 submit review component implemented
 ##changes
 display all reviews component implemented and roomdetails component updated
+##changes
+show submit review button logic implemented
 
 
 
