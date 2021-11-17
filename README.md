@@ -185,5 +185,13 @@ bookingdetails page and component created
 booking details component implemented
 ##changes
 implemented invoice get pdf functinonality with easy invoice package
+##changes
+installed npm stripe
+created stripe checkout session in the cotroller and required endpoint
+npm i @stripe/stripe-js installed
+created stripe js file in utils folder
+roomdetails updated
+$ npm install raw-body
+webhook endpoint created
 
 

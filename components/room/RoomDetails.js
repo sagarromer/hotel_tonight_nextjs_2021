@@ -18,6 +18,7 @@ import { clearErrors } from '../../redux/actions/roomActions'
 import { checkBooking, getBookedDates } from '../../redux/actions/bookingActions'
 import { CHECK_BOOKING_RESET } from '../../redux/constants/bookingConstants'
 
+import getStripe from '../../utils/getStripe'
 import axios from 'axios'
 
 const RoomDetails = () => {
@@ -90,6 +91,34 @@ const RoomDetails = () => {
 
             console.log(error.response);
 
+        }
+
+    }
+    const bookRoom = async (id, pricePerNight) => {
+
+        setPaymentLoading(true);
+
+        const amount = pricePerNight * daysOfStay;
+
+
+        try {
+
+            const link = `/api/checkout_session/${id}?checkInDate=${checkInDate.toISOString()}&checkOutDate=${checkOutDate.toISOString()}&daysOfStay=${daysOfStay}`
+
+            const { data } = await axios.get(link, { params: { amount } })
+
+            const stripe = await getStripe();
+
+            // Redirect to checkout
+            stripe.redirectToCheckout({ sessionId: data.id })
+
+            setPaymentLoading(false);
+
+        } catch (error) {
+
+            setPaymentLoading(false);
+            console.log(error);
+            toast.error(error.message)
         }
 
     }
@@ -176,6 +205,17 @@ const RoomDetails = () => {
                             {available && !user &&
                                 <div className="alert alert-danger my-3 font-weight-bold">Login to book room.</div>
                             }
+
+                            {available && user &&
+                                <button
+                                    className="btn btn-block py-3 booking-btn"
+                                    onClick={() => bookRoom(room._id, room.pricePerNight)}
+                                    disabled={bookingLoading || paymentLoading ? true : false}
+                                >
+                                    Pay - ${daysOfStay * room.pricePerNight}
+                                </button>
+                            }
+
 
                             <button className="btn btn-block py-3 booking-btn"
                             onClick={newBookingHandler}>pay</button>
