@@ -4,6 +4,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 import RoomFeatures from './RoomFeatures'
+import NewReview from '../review/NewReview'
+
 
 import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css";
@@ -215,6 +217,7 @@ const RoomDetails = () => {
                                     Pay - ${daysOfStay * room.pricePerNight}
                                 </button>
                             }
+                            
 
 
                             <button className="btn btn-block py-3 booking-btn"
@@ -222,6 +225,7 @@ const RoomDetails = () => {
                         </div>
                     </div>
                 </div>
+                <NewReview />
 
                 
 
