@@ -195,5 +195,8 @@ $ npm install raw-body
 webhook endpoint created
 ##changes
 roomreview endpoint and controller for new review implemented
+##changes
+new review redux part implemented
+
 
 
