@@ -199,6 +199,8 @@ roomreview endpoint and controller for new review implemented
 new review redux part implemented
 ##changes
 submit review component implemented
+##changes
+display all reviews component implemented and roomdetails component updated
 
 
 
