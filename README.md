@@ -205,6 +205,10 @@ display all reviews component implemented and roomdetails component updated
 show submit review button logic implemented
 ##changes
 not found page implemented
+##changes
+admin get all rooms endpoint with role based authorization implemented
+##changes
+display all rooms functionality implemented for admin
 
 
 
