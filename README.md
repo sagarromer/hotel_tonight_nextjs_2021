@@ -213,6 +213,8 @@ display all rooms functionality implemented for admin
 new room reducer and actions implemented
 ##changes
 new room creation component page by admin implemented
+##changes
+update room reducer and actions completed
 
 
 
