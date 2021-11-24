@@ -211,6 +211,9 @@ admin get all rooms endpoint with role based authorization implemented
 display all rooms functionality implemented for admin
 ##changes
 new room reducer and actions implemented
+##changes
+new room creation component page by admin implemented
+
 
 
 
