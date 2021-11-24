@@ -209,6 +209,8 @@ not found page implemented
 admin get all rooms endpoint with role based authorization implemented
 ##changes
 display all rooms functionality implemented for admin
+##changes
+new room reducer and actions implemented
 
 
 
