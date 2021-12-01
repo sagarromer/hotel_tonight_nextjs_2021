@@ -78,11 +78,13 @@ const updateRoom = catchAsyncErrors( async (req, res, next) => {
     if(!room){
         return next(new ErrorHandler('room not found with this ID'));  
     }
+    if(req.body.images){
     //delete images asspciated with the room
     for(let i =0;i < room.images.length; i++){
         await cloudinary.v2.uploader.destroy(room.images[i].public_id);
     }
-    for (let i = 0; i < images.length; i++) {
+    let imagesLinks = [];
+    for (let i = 0; i < req.body.images.length; i++) {
 
         const result = await cloudinary.v2.uploader.upload(images[i], {
             folder: 'bookit/rooms',
@@ -95,6 +97,7 @@ const updateRoom = catchAsyncErrors( async (req, res, next) => {
         req.body.images = imagesLinks
 
     } 
+}
     room = await Room.findByIdAndUpdate(req.query.id, req.body, {
         new: true,
         runValidators: true,
@@ -111,6 +114,11 @@ const deleteRoom = catchAsyncErrors( async (req, res, next) => {
     if(!room){
         return next(new ErrorHandler('room not found with this ID'));
     }
+    // Delete images associated with the room
+    for (let i = 0; i < room.images.length; i++) {
+        await cloudinary.v2.uploader.destroy(room.images[i].public_id)
+    }
+
     await room.remove();
     res.status(200).json({
         success: true,

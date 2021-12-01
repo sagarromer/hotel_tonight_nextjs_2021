@@ -215,6 +215,9 @@ new room reducer and actions implemented
 new room creation component page by admin implemented
 ##changes
 update room reducer and actions completed
+##changes
+update room component created
+
 
 
 

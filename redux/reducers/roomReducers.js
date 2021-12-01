@@ -21,6 +21,10 @@ import {
     UPDATE_ROOM_SUCCESS,
     UPDATE_ROOM_RESET,
     UPDATE_ROOM_FAIL,
+    DELETE_ROOM_REQUEST,
+    DELETE_ROOM_SUCCESS,
+    DELETE_ROOM_RESET,
+    DELETE_ROOM_FAIL,
     CLEAR_ERRORS
 
 } from '../constants/roomConstants'
@@ -192,7 +196,7 @@ export const newRoomReducer = (state = { room: {} }, action) => {
 export const roomReducer = (state = {}, action) => {
     switch (action.type) {
         case UPDATE_ROOM_REQUEST:
-        //case DELETE_ROOM_REQUEST:
+        case DELETE_ROOM_REQUEST:
             return {
                 loading: true
             }
@@ -203,25 +207,25 @@ export const roomReducer = (state = {}, action) => {
                 isUpdated: action.payload
             }
 
-        // case DELETE_ROOM_SUCCESS:
-        //     return {
-        //         loading: false,
-        //         isDeleted: action.payload
-        //     }
+        case DELETE_ROOM_SUCCESS:
+            return {
+                loading: false,
+                isDeleted: action.payload
+            }
 
         case UPDATE_ROOM_RESET:
             return {
                 isUpdated: false
             }
 
-        // case DELETE_ROOM_RESET:
-        //     return {
-        //         loading: false,
-        //         isDeleted: false
-        //     }
+        case DELETE_ROOM_RESET:
+            return {
+                loading: false,
+                isDeleted: false
+            }
 
         case UPDATE_ROOM_FAIL:
-        //case DELETE_ROOM_FAIL:
+        case DELETE_ROOM_FAIL:
             return {
                 loading: false,
                 error: action.payload
@@ -237,3 +241,4 @@ export const roomReducer = (state = {}, action) => {
             return state
     }
 }
+
