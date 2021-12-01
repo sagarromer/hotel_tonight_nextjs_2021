@@ -53,6 +53,31 @@ export const getRooms = (req, currentPage = 1, location= '',guests, category) =>
         })
     }
 }
+export const newRoom = (roomData) => async (dispatch) => {
+    try {
+
+        dispatch({ type: NEW_ROOM_REQUEST })
+
+        const config = {
+            header: {
+                'Content-Type': 'application/json'
+            }
+        }
+
+        const { data } = await axios.post(`/api/rooms`, roomData, config)
+
+        dispatch({
+            type: NEW_ROOM_SUCCESS,
+            payload: data
+        })
+
+    } catch (error) {
+        dispatch({
+            type: NEW_ROOM_FAIL,
+            payload: error.response.data.message
+        })
+    }
+}
 
 // Get room details
 export const getRoomDetails = (req, id) => async (dispatch) => {
