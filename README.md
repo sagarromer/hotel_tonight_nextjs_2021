@@ -221,6 +221,9 @@ update room component created
 delete room implemented
 ##changes
 display all booking implmented
+##changes
+update user implemented
+delete user implemented
 
 
 
