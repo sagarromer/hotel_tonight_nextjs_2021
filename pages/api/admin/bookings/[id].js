@@ -1,7 +1,7 @@
 import nc from 'next-connect'
 import dbConnect from '../../../../config/dbConnect'
 
-import { allAdminRooms } from '../../../../controllers/roomControllers'
+import { deleteBooking } from '../../../../controllers/bookingControllers'
 
 import onError from '../../../../middlewares/error'
 import { isAuthenticatedUser, authorizeRoles } from '../../../../middlewares/auth'
@@ -12,6 +12,6 @@ dbConnect();
 
 handler
     .use(isAuthenticatedUser, authorizeRoles('admin'))
-    .get(allAdminRooms)
+    .delete(deleteBooking)
 
 export default handler;

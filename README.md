@@ -217,6 +217,11 @@ new room creation component page by admin implemented
 update room reducer and actions completed
 ##changes
 update room component created
+##changes
+delete room implemented
+##changes
+display all booking implmented
+
 
 
 
